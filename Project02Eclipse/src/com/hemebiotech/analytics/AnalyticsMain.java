@@ -23,13 +23,13 @@ public class AnalyticsMain {
 		// Get the list of symptoms.
 		List<String> symptoms = readSympotms.getSymptoms();		
 		
-		ISortedSymptoms iss = new SortSymptom();
+		ISortedSymptoms sortTheSymptoms = new SortSymptom();
 		// Count and sort the symptoms.
-		TreeMap<String, Integer> sortedSymptoms = iss.sortSymptoms(symptoms);	
+		TreeMap<String, Integer> sortedSymptoms = sortTheSymptoms.sortSymptoms(symptoms);	
 		
-		IWriteSymptoms iws = new WriteSymptomsDataToResultFile();	
+		IWriteSymptoms writeTheSymptoms = new WriteSymptomsDataToResultFile();	
 		// Write the symptoms in a new file.
-		iws.writeResult(sortedSymptoms);
+		writeTheSymptoms.writeResult(sortedSymptoms);
 		
 	}
 
